@@ -16,7 +16,7 @@ import java.util.LinkedHashSet;
  */
 public class Factory {
     
-    public Set factory(int tipoSet){
+    public Set seleccionarSet(int tipoSet){
         switch(tipoSet){
             case 0:
                 return new HashSet();
