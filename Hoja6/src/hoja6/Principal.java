@@ -18,21 +18,21 @@ public class Principal {
         
         Scanner scanner = new Scanner(System.in);
         
-        Set conjuntoJava;
-        Set conjuntoAndroid;
-        Set conjuntoIOS;
+        Set conjuntoJava = null;
+        Set conjuntoAndroid = null;
+        Set conjuntoIOS = null;
         
         Factory factory = new Factory();
         
-        boolean loop1 = true;
-        while(loop1){
+        boolean loop = true;
+        while(loop){
             System.out.println("Que implementacion desea utilizar?\n 1. HashSet\n"
                     + " 2. TreeSet\n 3.LinkedHashSet");
             try{
                 int seleccion = scanner.nextInt();
                 scanner.nextLine();
                 if(seleccion>0 && seleccion<4){
-                    loop1 = false;
+                    loop = false;
                     switch(seleccion){
                         case 1:
                             conjuntoJava = factory.seleccionarSet(0);
@@ -44,7 +44,7 @@ public class Principal {
                             conjuntoAndroid = factory.seleccionarSet(1);
                             conjuntoIOS = factory.seleccionarSet(1);
                             break;
-                        case 3:
+                        default:
                             conjuntoJava = factory.seleccionarSet(2);
                             conjuntoAndroid = factory.seleccionarSet(2);
                             conjuntoIOS = factory.seleccionarSet(2);
@@ -58,9 +58,9 @@ public class Principal {
                 scanner.nextLine();
             }
         }
-        
-        while(loop1){
-            System.out.println("Menu:\n 1. Ingresar Desarrollador \n 2. Mostrar Estadisticas");
+        loop = true;
+        while(loop){
+            System.out.println("Menu:\n 1. Ingresar Desarrollador \n 2. Mostrar Estadisticas \n 3. Salir");
                     
                     
                     /*+ "\n"
@@ -77,17 +77,31 @@ public class Principal {
                 int seleccion = scanner.nextInt();
                 scanner.nextLine();
                 if(seleccion>0 && seleccion<3){
-                    loop1 = false;
+                    
                     switch(seleccion){
                         case 1:
+                            System.out.println("Ingrese el nombre del desarrollador: ");
                             String nombre =  scanner.nextLine();
-                            
-                            
-                            
-                            
+                            System.out.println("Area de experiencia:\n 1. Java\n 2. Android\n 3. IOS");
+                            int seleccion2 = scanner.nextInt();
+                            scanner.nextLine();
+                            switch(seleccion2){
+                                case 1:
+                                    conjuntoJava.add(nombre);
+                                    break;
+                                case 2:
+                                    conjuntoAndroid.add(nombre);
+                                    break;
+                                default:
+                                    conjuntoIOS.add(nombre);
+                                    break;
+                            }
                             break;
                         case 2:
                             
+                            break;
+                        case 3:
+                            loop = false;
                             break;
                     }
                 }else{
