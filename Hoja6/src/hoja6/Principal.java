@@ -96,12 +96,37 @@ public class Principal {
                             break;
                             //Impresion de estadisticas
                         case 2: 
-                      
-                            System.out.println("EL numero de desarrolladores con experiencia en Java, Android y iOS es de: "+(conjuntoJava.size()+ conjuntoAndroid.size()));
-                            System.out.println("El numero de desarrolladores con experiencia en Java pero no en Androd es de: "+conjuntoIOS.size()+conjuntoJava.size());
-                            System.out.println("El numero de desarrolladores con experiencia en Android y iOs (interesccion) es de: ");
-                            System.out.println("El numero de desarrolladores con experiencia en Android y iOs (union) es de: ");
-                            System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: ");
+                            int a = 0;
+                            //Nos indica cuando desarrolladores de java, android y ios existen 
+                               if( conjuntoAndroid.equals(conjuntoJava)==true && conjuntoIOS.equals(conjuntoJava)==true ){
+                               a++;  
+                               }
+                        //1
+                            System.out.println("EL numero de desarrolladores con experiencia en Java, Android y iOS es de: "+ a);
+                            System.out.println("El numero de desarrolladores con experiencia en Java pero no en Andriod es de: "+(conjuntoIOS.size()+conjuntoJava.size()));
+                        //3    
+                            int b = 0;
+                            
+                            if(conjuntoAndroid.equals(conjuntoIOS)==true){
+                                b++;
+                            }
+                            System.out.println("El numero de desarrolladores con experiencia en Android y iOs (interesccion) es de: "+b);//duda
+                        //4    
+                            System.out.println("El numero de desarrolladores con experiencia en Android y iOs (union) es de: "+ b);//duda
+                            
+                        //5
+                            
+                        //6
+                            if(conjuntoAndroid.size()>= conjuntoJava.size() && conjuntoAndroid.size()>= conjuntoIOS.size()){
+                               System.out.println("El conjunto con mas desarrolladores es de: Android. Con los siguientes: "+conjuntoAndroid.size()+" sus desarrolladores son: "+conjuntoAndroid); 
+                            }
+                            else if (conjuntoJava.size()>= conjuntoAndroid.size()&& conjuntoJava.size()>=conjuntoIOS.size()){
+                                 System.out.println("El conjunto con mas desarrolladores es de: Java. Con los siguientes: "+conjuntoJava.size()+" sus desarrolladores son: "+conjuntoJava); 
+                            }
+                            else if(conjuntoIOS.size()>= conjuntoJava.size()&& conjuntoIOS.size()>=conjuntoAndroid.size()){
+                                 System.out.println("El conjunto con mas desarrolladores es de: IOS. Con los siguientes: "+conjuntoAndroid.size()+ " sus desarrolladores son: "+conjuntoIOS); 
+                            }
+                        //6   
                             System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: "); //numero ascendente 
                             break;                                   
                         case 3:
