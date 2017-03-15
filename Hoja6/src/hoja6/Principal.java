@@ -84,7 +84,6 @@ public class Principal {
                             switch(seleccion2){
                                 case 1:
                                     conjuntoJava.add(nombre);
-                                    System.out.println(conjuntoJava);
                                     break;
                                 case 2:
                                     conjuntoAndroid.add(nombre);
