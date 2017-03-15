@@ -67,7 +67,7 @@ public class Principal {
             try{
                 int seleccion = scanner.nextInt();
                 scanner.nextLine();
-                if(seleccion>0 && seleccion<3){
+                if(seleccion>0 && seleccion<=3){
                     
                     switch(seleccion){
                         case 1:
