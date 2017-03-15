@@ -63,16 +63,7 @@ public class Principal {
             System.out.println("Menu:\n 1. Ingresar Desarrollador \n 2. Mostrar Estadisticas \n 3. Salir");
                     
                     
-                    /*+ "\n"
-                    + " 2. Desarrolladores con experiencia en Java, Android y iOS\n "
-                    + "3.Desarrolladores con experiencia en Java pero que no tengan "
-                    + "experiencia en Android\n 4.Desarrolladores con experiencia en"
-                    + " Android y iOS, pero que no tengan experiencia en Java\n "
-                    + "5. Desarrolladores con experiencia en Android o iOS"
-                    + ", pero que no tengan experiencia en Java\n 6. Indicar SI o NO"
-                    + " el conjunto de desarrolladores Java es un subconjunto de Des"
-                    + "arrolladores Android."
-                    + "");*/
+                    
             try{
                 int seleccion = scanner.nextInt();
                 scanner.nextLine();
@@ -98,7 +89,12 @@ public class Principal {
                             }
                             break;
                         case 2:
-                            
+                            System.out.println("EL numero de desarrolladores con experiencia en Java, Android y iOS es de: ");
+                            System.out.println("El numero de desarrolladores con experiencia en Java paro no en Androdi es de: ");
+                            System.out.println("El numero de desarrolladores con experiencia en Android y iOs (interesccion) es de: ");
+                            System.out.println("El numero de desarrolladores con experiencia en Android y iOs (union) es de: ");
+                            System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: ");
+                            System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: "); //numero ascendente 
                             break;
                         case 3:
                             loop = false;
