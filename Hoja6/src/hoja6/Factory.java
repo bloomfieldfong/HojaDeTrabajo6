@@ -13,17 +13,18 @@ import java.util.LinkedHashSet;
 /**
  *
  * @author chris
+ * @param <E>
  */
-public class Factory {
+public class Factory<E>{
     
-    public Set seleccionarSet(int tipoSet){
+    public Set<E> seleccionarSet(int tipoSet){
         switch(tipoSet){
             case 0:
-                return new HashSet();
+                return new HashSet<>();
             case 1:
-                return new TreeSet();
+                return new TreeSet<>();
             case 2:
-                return new LinkedHashSet();
+                return new LinkedHashSet<>();
             default:
                 return null;
         }

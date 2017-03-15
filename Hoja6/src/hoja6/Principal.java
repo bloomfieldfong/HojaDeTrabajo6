@@ -17,15 +17,16 @@ public class Principal {
     public static void main(String[] args){
         
         Scanner scanner = new Scanner(System.in);
+        //Sets de los conjunots
+        Set<String> conjuntoJava = null;
+        Set<String> conjuntoAndroid = null;
+        Set<String> conjuntoIOS = null;
         
-        Set conjuntoJava = null;
-        Set conjuntoAndroid = null;
-        Set conjuntoIOS = null;
-        
-        Factory factory = new Factory();
+        Factory<String> factory = new Factory<>();
         
         boolean loop = true;
         while(loop){
+            //Seleccion de la implementacion que se desea utilizar
             System.out.println("Que implementacion desea utilizar?\n 1. HashSet\n"
                     + " 2. TreeSet\n 3.LinkedHashSet");
             try{
@@ -35,25 +36,30 @@ public class Principal {
                     loop = false;
                     switch(seleccion){
                         case 1:
+                            //Seleccion con el factory
                             conjuntoJava = factory.seleccionarSet(0);
                             conjuntoAndroid = factory.seleccionarSet(0);
                             conjuntoIOS = factory.seleccionarSet(0);
                             break;
                         case 2:
+                            //Seleccion con el factory
                             conjuntoJava = factory.seleccionarSet(1);
                             conjuntoAndroid = factory.seleccionarSet(1);
                             conjuntoIOS = factory.seleccionarSet(1);
                             break;
                         default:
+                            //Seleccion con el factory
                             conjuntoJava = factory.seleccionarSet(2);
                             conjuntoAndroid = factory.seleccionarSet(2);
                             conjuntoIOS = factory.seleccionarSet(2);
                             break;
                     }
                 }else{
+                    //numero fuera de rango
                     System.out.println("Numero fuera de rango");
                 }
             }catch(Exception e){
+               //si se agrega un string que le diga que agrege solo numeros
                 System.out.println("Solo ingrese numeros");
                 scanner.nextLine();
             }
@@ -61,16 +67,15 @@ public class Principal {
         loop = true;
         while(loop){
             System.out.println("Menu:\n 1. Ingresar Desarrollador \n 2. Mostrar Estadisticas \n 3. Salir");
-                    
-                    
-                    
+                          
             try{
                 int seleccion = scanner.nextInt();
                 scanner.nextLine();
                 if(seleccion>0 && seleccion<=3){
-                    
+                    //ya que ingreso un tipo de implementacion que desea usar debera seleccionar que desea hacer
                     switch(seleccion){
                         case 1:
+                            //Ingreso de datos del desarrollador que se desea ingresar 
                             System.out.println("Ingrese el nombre del desarrollador: ");
                             String nombre =  scanner.nextLine();
                             System.out.println("Area de experiencia:\n 1. Java\n 2. Android\n 3. IOS");
@@ -79,6 +84,7 @@ public class Principal {
                             switch(seleccion2){
                                 case 1:
                                     conjuntoJava.add(nombre);
+                                    System.out.println(conjuntoJava);
                                     break;
                                 case 2:
                                     conjuntoAndroid.add(nombre);
@@ -88,46 +94,26 @@ public class Principal {
                                     break;
                             }
                             break;
-                        case 2:
-                            switch(seleccion){
-                                case 1:
-                                    System.out.println(conjuntoJava);
-                                    System.out.println("EL numero de desarrolladores con experiencia en Java, Android y iOS es de: "+ conjuntoJava.size());
-                                    System.out.println("El numero de desarrolladores con experiencia en Java paro no en Androdi es de: ");
-                                    System.out.println("El numero de desarrolladores con experiencia en Android y iOs (interesccion) es de: ");
-                                    System.out.println("El numero de desarrolladores con experiencia en Android y iOs (union) es de: ");
-                                    System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: ");
-                                    System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: "); //numero ascendente 
-                                    break;
-                                   
-                                case 2:
-                                    System.out.println("EL numero de desarrolladores con experiencia en Java, Android y iOS es de: ");
-                                    System.out.println("El numero de desarrolladores con experiencia en Java paro no en Androdi es de: ");
-                                    System.out.println("El numero de desarrolladores con experiencia en Android y iOs (interesccion) es de: ");
-                                    System.out.println("El numero de desarrolladores con experiencia en Android y iOs (union) es de: ");
-                                    System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: ");
-                                    System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: "); //numero ascendente 
-                                    break;
-                                    
-                                case 3:
-                                    System.out.println("EL numero de desarrolladores con experiencia en Java, Android y iOS es de: ");
-                                    System.out.println("El numero de desarrolladores con experiencia en Java paro no en Androdi es de: ");
-                                    System.out.println("El numero de desarrolladores con experiencia en Android y iOs (interesccion) es de: ");
-                                    System.out.println("El numero de desarrolladores con experiencia en Android y iOs (union) es de: ");
-                                    System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: ");
-                                    System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: "); //numero ascendente 
-                                    break;
-                                        
-                            }
-                            break;
+                            //Impresion de estadisticas
+                        case 2: 
+                      
+                            System.out.println("EL numero de desarrolladores con experiencia en Java, Android y iOS es de: "+(conjuntoJava.size()+ conjuntoAndroid.size()));
+                            System.out.println("El numero de desarrolladores con experiencia en Java pero no en Androd es de: "+conjuntoIOS.size()+conjuntoJava.size());
+                            System.out.println("El numero de desarrolladores con experiencia en Android y iOs (interesccion) es de: ");
+                            System.out.println("El numero de desarrolladores con experiencia en Android y iOs (union) es de: ");
+                            System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: ");
+                            System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: "); //numero ascendente 
+                            break;                                   
                         case 3:
                             loop = false;
                             break;
                     }
                 }else{
+                    //Le dice si su numero esta fuera de rango
                     System.out.println("Numero fuera de rango");
                 }
             }catch(Exception e){
+                   //Si ingresa un string le dice que solo puede agregar numeros
                 System.out.println("Solo ingrese numeros");
                 scanner.nextLine();
             }
