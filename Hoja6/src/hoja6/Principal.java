@@ -89,12 +89,36 @@ public class Principal {
                             }
                             break;
                         case 2:
-                            System.out.println("EL numero de desarrolladores con experiencia en Java, Android y iOS es de: ");
-                            System.out.println("El numero de desarrolladores con experiencia en Java paro no en Androdi es de: ");
-                            System.out.println("El numero de desarrolladores con experiencia en Android y iOs (interesccion) es de: ");
-                            System.out.println("El numero de desarrolladores con experiencia en Android y iOs (union) es de: ");
-                            System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: ");
-                            System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: "); //numero ascendente 
+                            switch(seleccion){
+                                case 1:
+                                    System.out.println(conjuntoJava);
+                                    System.out.println("EL numero de desarrolladores con experiencia en Java, Android y iOS es de: "+ conjuntoJava.size());
+                                    System.out.println("El numero de desarrolladores con experiencia en Java paro no en Androdi es de: ");
+                                    System.out.println("El numero de desarrolladores con experiencia en Android y iOs (interesccion) es de: ");
+                                    System.out.println("El numero de desarrolladores con experiencia en Android y iOs (union) es de: ");
+                                    System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: ");
+                                    System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: "); //numero ascendente 
+                                    break;
+                                   
+                                case 2:
+                                    System.out.println("EL numero de desarrolladores con experiencia en Java, Android y iOS es de: ");
+                                    System.out.println("El numero de desarrolladores con experiencia en Java paro no en Androdi es de: ");
+                                    System.out.println("El numero de desarrolladores con experiencia en Android y iOs (interesccion) es de: ");
+                                    System.out.println("El numero de desarrolladores con experiencia en Android y iOs (union) es de: ");
+                                    System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: ");
+                                    System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: "); //numero ascendente 
+                                    break;
+                                    
+                                case 3:
+                                    System.out.println("EL numero de desarrolladores con experiencia en Java, Android y iOS es de: ");
+                                    System.out.println("El numero de desarrolladores con experiencia en Java paro no en Androdi es de: ");
+                                    System.out.println("El numero de desarrolladores con experiencia en Android y iOs (interesccion) es de: ");
+                                    System.out.println("El numero de desarrolladores con experiencia en Android y iOs (union) es de: ");
+                                    System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: ");
+                                    System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: "); //numero ascendente 
+                                    break;
+                                        
+                            }
                             break;
                         case 3:
                             loop = false;
