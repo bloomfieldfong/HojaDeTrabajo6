@@ -110,21 +110,32 @@ public class Principal {
                             if(conjuntoAndroid.equals(conjuntoIOS)==true){
                                 b++;
                             }
-                            System.out.println("El numero de desarrolladores con experiencia en Android y iOs (interesccion) es de: "+b);//duda
+                            System.out.println("El numero de desarrolladores con experiencia en Android y iOs (interesccion) es de: "+b);
                         //4    
-                            System.out.println("El numero de desarrolladores con experiencia en Android y iOs (union) es de: "+ b);//duda
+                            System.out.println("El numero de desarrolladores con experiencia en Android o iOs es de: "+ (conjuntoAndroid.size()+conjuntoIOS.size()));//duda
                             
                         //5
+                            int c = 0;
+                            if(conjuntoJava.equals(conjuntoAndroid)== true){
+                               c++; 
+                            }
+                            if(c>=(conjuntoJava.size()*0.8)){
+                                System.out.println("NO");
+                            }
+                            else{
+                                System.out.println("Si");
+                            }
+                           
                             
                         //6
                             if(conjuntoAndroid.size()>= conjuntoJava.size() && conjuntoAndroid.size()>= conjuntoIOS.size()){
-                               System.out.println("El conjunto con mas desarrolladores es de: Android. Con los siguientes: "+conjuntoAndroid.size()+" sus desarrolladores son: "+conjuntoAndroid); 
+                               System.out.println("El conjunto con mas desarrolladores es de: Android. Con un total de: "+conjuntoAndroid.size()+" sus desarrolladores son: "+conjuntoAndroid); 
                             }
                             else if (conjuntoJava.size()>= conjuntoAndroid.size()&& conjuntoJava.size()>=conjuntoIOS.size()){
-                                 System.out.println("El conjunto con mas desarrolladores es de: Java. Con los siguientes: "+conjuntoJava.size()+" sus desarrolladores son: "+conjuntoJava); 
+                                 System.out.println("El conjunto con mas desarrolladores es de: Java. Con un total de: "+conjuntoJava.size()+" sus desarrolladores son: "+conjuntoJava); 
                             }
                             else if(conjuntoIOS.size()>= conjuntoJava.size()&& conjuntoIOS.size()>=conjuntoAndroid.size()){
-                                 System.out.println("El conjunto con mas desarrolladores es de: IOS. Con los siguientes: "+conjuntoAndroid.size()+ " sus desarrolladores son: "+conjuntoIOS); 
+                                 System.out.println("El conjunto con mas desarrolladores es de: IOS. Con un total de: "+conjuntoAndroid.size()+ " sus desarrolladores son: "+conjuntoIOS); 
                             }
                         //7   
                             if(conjuntoAndroid.size()>= conjuntoJava.size() && conjuntoAndroid.size()>= conjuntoIOS.size()){
