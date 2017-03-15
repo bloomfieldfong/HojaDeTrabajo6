@@ -126,8 +126,16 @@ public class Principal {
                             else if(conjuntoIOS.size()>= conjuntoJava.size()&& conjuntoIOS.size()>=conjuntoAndroid.size()){
                                  System.out.println("El conjunto con mas desarrolladores es de: IOS. Con los siguientes: "+conjuntoAndroid.size()+ " sus desarrolladores son: "+conjuntoIOS); 
                             }
-                        //6   
-                            System.out.println("El conjunto con mas desarrolladores es de: . Con los siguientes: "); //numero ascendente 
+                        //7   
+                            if(conjuntoAndroid.size()>= conjuntoJava.size() && conjuntoAndroid.size()>= conjuntoIOS.size()){
+                               System.out.println(conjuntoAndroid); 
+                            }
+                            else if (conjuntoJava.size()>= conjuntoAndroid.size()&& conjuntoJava.size()>=conjuntoIOS.size()){
+                                 System.out.println(conjuntoJava); 
+                            }
+                            else if(conjuntoIOS.size()>= conjuntoJava.size()&& conjuntoIOS.size()>=conjuntoAndroid.size()){
+                                 System.out.println(conjuntoIOS); 
+                            }
                             break;                                   
                         case 3:
                             loop = false;
