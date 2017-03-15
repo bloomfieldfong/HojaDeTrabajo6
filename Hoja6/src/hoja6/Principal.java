@@ -18,11 +18,11 @@ public class Principal {
         
         Scanner scanner = new Scanner(System.in);
         
-        Set conjuntoJava = null;
-        Set conjuntoAndroid = null;
-        Set conjuntoIOS = null;
+        Set<String> conjuntoJava = null;
+        Set<String> conjuntoAndroid = null;
+        Set<String> conjuntoIOS = null;
         
-        Factory factory = new Factory();
+        Factory<String> factory = new Factory<>();
         
         boolean loop = true;
         while(loop){
@@ -89,7 +89,13 @@ public class Principal {
                             }
                             break;
                         case 2:
-                            System.out.println("EL numero de desarrolladores con experiencia en Java, Android y iOS es de: ");
+                            int cantidadJAI = 0;
+                            String[] listaAndroid = (String[])conjuntoAndroid.toArray();
+                            
+                            System.out.println("JAVA: " + conjuntoJava);
+                            System.out.println("ANDROID: " + conjuntoAndroid);
+                            System.out.println("IOS: " + conjuntoIOS);
+                            System.out.println("EL numero de desarrolladores con experiencia en Java, Android y iOS es de: " + cantidadJAI);
                             System.out.println("El numero de desarrolladores con experiencia en Java paro no en Androdi es de: ");
                             System.out.println("El numero de desarrolladores con experiencia en Android y iOs (interesccion) es de: ");
                             System.out.println("El numero de desarrolladores con experiencia en Android y iOs (union) es de: ");
