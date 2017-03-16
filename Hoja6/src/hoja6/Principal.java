@@ -125,7 +125,7 @@ public class Principal {
                             int cantidadIOSNoAndroid = 0;
                             boolean esSubconjunto = true;
 
-                            //Nos indica cuando desarrolladores de java, android y ios existen 
+                            //Convertimos los conjuntos a arrays para recorrer todos los elementos
                             ArrayList<String> listaJava = new ArrayList<>(conjuntoJava);
                             ArrayList<String> listaAndroid = new ArrayList<>(conjuntoAndroid);
                             ArrayList<String> listaIOS = new ArrayList<>(conjuntoIOS);
@@ -155,32 +155,15 @@ public class Principal {
                                 }
                             }
                         //1
-                            System.out.println("1. EL numero de desarrolladores con experiencia en Java, Android y iOS es de: "+ cantidadTodos);
+                            System.out.println("1. EL numero de desarrolladores con experiencia en Java, Android y iOS es de: " + cantidadTodos);
                             System.out.println("2. El numero de desarrolladores con experiencia en Java pero no en Andriod es de: " + cantidadJavaNoAndroid);
                         //3    
-                            int b = 0;
-                            
-                            if(conjuntoAndroid.equals(conjuntoIOS)==true){
-                                b++;
-                            }
                             System.out.println("3. El numero de desarrolladores con experiencia en Android y iOs pero no en Java es de: " + cantidadAndroidYIOSNOJava);
                         //4    
                             System.out.println("4. El numero de desarrolladores con experiencia en Android o iOs es de: "+ (cantidadAndroidNoIOS+cantidadIOSNoAndroid));//duda
                             
                         //5
-                            /*int c = 0;
-                            if(conjuntoJava.equals(conjuntoAndroid)== true){
-                               c++; 
-                            }
-                            if(c>=(conjuntoJava.size()*0.8)){
-                                System.out.println("NO");
-                            }
-                            else{
-                                System.out.println("Si");
-                            }*/
                             System.out.println("3. El conjunto de desarrolladores Java es subconjunto de los desarrolladores Android: " + esSubconjunto);
-                           
-                            
                         //6
                             if(conjuntoAndroid.size()>= conjuntoJava.size() && conjuntoAndroid.size()>= conjuntoIOS.size()){
                                System.out.println("4. El conjunto con mas desarrolladores es de: Android. Con un total de: "+conjuntoAndroid.size()+" sus desarrolladores son: "+conjuntoAndroid); 
